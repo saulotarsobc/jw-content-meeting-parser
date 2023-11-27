@@ -1,9 +1,22 @@
 # JW Meeting Content Parser
 
-## Baixando
+![Alt text](./imgs/image.png)
+
+## Baixando e execultando
 
 ```sh
+git clone https://github.com/saulotarsobc/jw-content-meeting-parser.git
+cd jw-content-meeting-parser
+npm install
+cp .env.example .env
+npm run dev
+```
 
+## Build e Start
+
+```sh
+npm run build;
+npm start
 ```
 
 ## Como usar?
@@ -17,6 +30,63 @@ Content-Type: application/x-www-form-urlencoded
 Content-Length: 2112
 
 content="..."
+```
+
+## Resposta
+
+```json
+{
+    "erro": false,
+    "data": {
+        "info": {
+            "date": "27 de novembro–3 de dezembro",
+            "sings": [
+                "Cântico 38 e oração",
+                "Cântico 136",
+                "Cântico 103 e oração"
+            ],
+            "biblicalBasis": "JÓ 20-21"
+        },
+        "treasures": [
+            {
+                "duration": "10 min",
+                "theme": "“Não é a riqueza que define se a pessoa é justa”"
+            },
+            {
+                "duration": "10 min",
+                "theme": "Joias espirituais"
+            },
+            {
+                "duration": "4 min",
+                "theme": "Leitura da Bíblia - Jó 20:1-22"
+            }
+        ],
+        "yourself": [
+            {
+                "duration": "2 min",
+                "theme": "Primeira conversa"
+            },
+            {
+                "duration": "5 min",
+                "theme": "Revisita"
+            },
+            {
+                "duration": "5 min",
+                "theme": "Discurso - Deus deseja que você seja rico?"
+            }
+        ],
+        "linving": [
+            {
+                "duration": "15 min",
+                "theme": "“‘Fiquem satisfeitos com as coisas que têm’”"
+            },
+            {
+                "duration": "30 min",
+                "theme": "Estudo bíblico de congregação"
+            }
+        ]
+    }
+}
 ```
 
 ### Content modelo
